@@ -118,6 +118,7 @@ main section{
 .about-info-container{
     display: flex;
     justify-content: space-around;
+    gap: 10px;
 }
 .about-info{
     text-align: center;
@@ -178,10 +179,15 @@ main section{
     margin: 10px 0;
 }
 .resume-container hr{
-    margin: 20px 0;
+    margin: 20px 10px;
 }
 .diownload-cv{
     text-align: center;
+    margin: 10px;
+}
+.resume-column{
+    display: 1;
+    flex-direction: column;
 }
 /* footer style */
 footer{
@@ -195,7 +201,7 @@ footer{
 
 }
 .footer-column{
-    width: 50%;
+    width: 100%;
     padding: 50px;
 }
 .social-link a{
@@ -204,15 +210,110 @@ footer{
 .section-description{
     margin: 30px;
 }
-
+.contact-input{
+    width: 100%;
+    /* background-color: gray; */
+    margin-top: 20px;
+}
+.contact-input input, textarea{
+    width: 100%;
+    margin-top: 10px;
+    height: 5vh;
+}
+textarea{
+    resize: none;
+    height: 20vh;
+}
 
 
 .contact input[type="text"], input[type="email"], textarea{
     display: block;
-    margin-bottom: 25px;
-    padding: 18px 35px;
+    /* margin-bottom: 25px;
+    padding: 18px 35px; */
     border-radius: 5px;
     background: #FFF;
     border: none;
-    width: 100%;
+}
+
+
+
+
+
+
+
+
+/* responsive styles */
+.hide{
+    display: none;
+}
+
+/* mobile devices */
+@media screen and (max-width:576px) {
+
+    .header{
+        background-image: none;
+    }
+    nav {
+        display: flex;  
+        flex-direction: column;
+        text-align: center;
+    }
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
+    }
+    .profile-picture {
+        width: 100%;
+    }
+    .benner {
+        padding: 20px;
+    }
+    .benner-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav-logo{
+        text-align: center;
+        margin: auto;
+    }
+
+
+    .skills-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #what-i-do{
+        padding: 10px 10px;
+    }
+    .resume-container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        background: #FFF8F3;
+    }
+    .footer-column{
+        width: 100%;
+        padding: 10px;
+    }
+    .contact-input input, textarea{
+        width: 70%;
+    }
+    .about {
+        padding:10px;
+    }
+    .about-info-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .benner{
+        flex-direction: column;
+    }
 }
